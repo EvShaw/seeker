@@ -8,12 +8,15 @@ const methodOverride = require("method-override");
 const flash = require("express-flash");
 const logger = require("morgan");
 const connectDB = require("./config/database");
+const mainRoutes = require("./routes/main");
+const companyRoutes = require("./routes/company");
 
 //Use .env file in config folder: 
-require('dotenv').config({path: './config/.env'})
+require('dotenv').config({ path: './config/.env' })
+
 
 //Passport config
-// require('.config/passport')(passport)
+require('./config/passport')(passport)
 
 //DB Connection: 
 connectDB()
@@ -23,6 +26,7 @@ app.set('view engine', 'ejs')
 
 //Static Folder: 
 app.use(express.static('public'))
+
 
 //Body Parsing: 
 app.use(express.urlencoded({ extended: true }))
@@ -52,7 +56,8 @@ app.use(passport.session());
 app.use(flash())
 
 //Routes
-// app.use("/", mainRoutes);
+app.use("/", mainRoutes);
+app.use("/company", companyRoutes);
 
 
 //Server online

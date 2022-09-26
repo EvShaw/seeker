@@ -1,0 +1,74 @@
+<%- include('partials/header') -%>
+
+
+
+
+  <section class="container">
+    <section class="row mt-5">
+      <section class="col-6">
+        <section>
+          <p>Welcome back <%= user.userName %>
+          </p>
+          <a href="/logout" class="col-3 btn btn-primary">Logout</a>
+        </section>
+        <section class="mt-5">
+
+          <% if (companies.length==0) { %>
+            <p>Create your first company!</p>
+            <section class="mt-5">
+              <h2>Create a new Company:</h2>
+              <form action="/company/createCompany" enctype="multipart/form-data" method="POST">
+                <section class="mb-3">
+                  <input type="text" class="form-control" id="companyName" name="companyName"
+                    placeholder="Company Name">
+                </section>
+                <section class="mb-3">
+                  <input type="text" class="form-control" id="companyWebsite" name="companyWebsite"
+                    placeholder="Company Website">
+                </section>
+                <section class="mb-3">
+                  <input type="text" class="form-control" id="industry" name="companyIndustry" placeholder="Industry">
+                </section>
+
+                <!-- <div class="mb-3">
+                  <label for="caption" class="form-label">Caption</label>
+                  <textarea class="form-control" id="caption" name="caption"></textarea>
+                </div>
+                <div class="mb-3">
+                  <label for="imgUpload" class="form-label">Image</label>
+                  <input type="file" class="form-control" id="imageUpload" name="file">
+                </div> -->
+                <button type="submit" class="btn btn-primary" value="Upload">Submit</button>
+              </form>
+            </section>
+            <% } else if (companies.length==1) { %>
+              <p>You have 1 company listed:</p>
+              <% } else { %>
+                <p>You currently have <%= companies.length %> companies on your hitlist:</p>
+                <% } %>
+
+
+                  <section class="listedCompanies">
+                    <h3>test</h3>
+                    <ul class="row list-unstyled">
+                      <% for(var i=0; i<companies.length; i++) {%>
+                        <li>yo</li>
+                        <% } %>
+                    </ul>
+                  </section>
+        </section>
+
+      </section>
+    </section>
+
+    <section class="createNewContainer">
+      <section class="createNewCircle">
+        <a href="/createNew"><h1 class="createNew">+</h1></a>
+      </section>
+      <h3>Create New Company</h3>
+     
+    </section>
+  </section>
+
+
+  <%- include('partials/footer') -%>
