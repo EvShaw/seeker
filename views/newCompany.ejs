@@ -1,0 +1,35 @@
+<% - include('partials/header') -%>
+
+  <section class="container">
+
+    <section class="mt-5">
+      <h2>Create a new Company:</h2>
+      <form action="/company/createCompany" enctype="multipart/form-data" method="POST">
+        <section class="mb-3">
+          <input type="text" class="form-control" id="companyName" name="companyName" placeholder="Company Name">
+        </section>
+        <section class="mb-3">
+          <input type="text" class="form-control" id="companyWebsite" name="companyWebsite"
+            placeholder="Company Website">
+        </section>
+        <section class="mb-3">
+          <input type="text" class="form-control" id="industry" name="companyIndustry" placeholder="Industry">
+        </section>
+
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </section>
+
+    <section class="row mt-5">
+      <section class="col-6">
+
+
+      </section>
+    </section>
+
+  </section>
+
+
+
+  <%- include('partials/footer') -%>
