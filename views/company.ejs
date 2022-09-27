@@ -1,0 +1,22 @@
+<section class="companyProfile">
+    <h1>
+        <%= company.name %>
+    </h1>
+    <section class="companyInfo">
+        <a href="/profile">
+            <%= company.website %>
+        </a>
+        <%= company.industry %>
+
+
+            <form action="/company/deleteCompany/<%= company._id %>?_method=DELETE" method="POST">
+                <button class="btn btn-outline-danger" type="submit">Delete</button>
+            </form>
+
+
+    </section>
+</section>
+
+<section>
+    <a href="/profile">Back to your profile</a>
+</section>

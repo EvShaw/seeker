@@ -5,11 +5,21 @@ const Company = require("../models/Company");
 module.exports = {
   getProfile: async (req, res) => {
     try {
-      const companies = await Company.find({ user: req.user.id });
+      const companies = await Company.find({ user: req.user.id }).sort({ createdAt: "asc" });
       res.render("profile.ejs", { companies: companies, user: req.user });
     } catch (err) {
       console.log(err);
     }
+  },
+  getCompany: async (req, res) => {
+  try {
+    const company = await Company.findById(req.params.id);
+    // const contacts = await Comment.find({ post: req.params.id }).sort({ createdAt: "asc" }).lean();         
+
+    res.render("company.ejs", { company: company, user: req.user,});
+  } catch (err) {
+    console.log(err);
+  }
   },
   createCompany: async (req, res) => {
     try {
@@ -30,5 +40,13 @@ module.exports = {
       console.log(err);
     }
   },
-
+  deleteCompany: async (req, res) => {
+    try {
+      await Company.deleteOne({ _id: req.params.id })
+      console.log(`Deleting ${req.params.id}`);
+      res.redirect("/profile");
+    } catch(err) {
+      console.error(err)
+    }
+  }
 };
