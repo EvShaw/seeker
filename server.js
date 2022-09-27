@@ -10,6 +10,7 @@ const logger = require("morgan");
 const connectDB = require("./config/database");
 const mainRoutes = require("./routes/main");
 const companyRoutes = require("./routes/company");
+const contactRoutes = require("./routes/contact");
 
 //Use .env file in config folder: 
 require('dotenv').config({ path: './config/.env' })
@@ -58,6 +59,7 @@ app.use(flash())
 //Routes
 app.use("/", mainRoutes);
 app.use("/company", companyRoutes);
+app.use("/contact", contactRoutes);
 
 
 //Server online

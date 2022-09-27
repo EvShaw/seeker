@@ -4,5 +4,8 @@ module.exports = {
     },
     newCompany: (req, res) => {
       res.render("newCompany.ejs")
+    },
+    newContact: (req, res) => {
+      res.render("newContact.ejs")
     }
   };
