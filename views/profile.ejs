@@ -1,14 +1,16 @@
 <%- include('partials/header') -%>
 
   <section class="container">
-    <section class="row mt-5">
+    <section class="row ">
       <section class="col-6">
         <section>
           <p>Welcome back <%= user.userName %>
           </p>
           <a href="/logout" class="col-3 btn btn-primary">Logout</a>
         </section>
-        <section class="mt-5">
+
+        
+        <section class="mt-5 testBreak">
 
           <% if (companies.length==0) { %>
             <p>Create your first company!</p>
@@ -34,17 +36,19 @@
               <% } else { %>
                 <p>You currently have <%=companies.length%> companies on your hitlist:</p>
                 <% } %>
-
         </section>
 
         <section class="listedCompanies">
           <h3>
-            test
+            test:
           </h3>
-          <ul class="row list-unstyled">
+          <ul class="list-unstyled profileList">
             <% for(var i=0; i<companies.length; i++) {%>
               <li class="col-6 justify-content-between mt-5">
-                <a href="#"><%= companies[i].name %></a>
+                <a href="<%= companies[i]._id %>"><%= companies[i].name %></a>
+                <!-- <a href="#"><%= companies[i].name %></a> -->
+                <!-- <a href="#"><%= companies[i].website %></a> -->
+                <!-- <a href="#"><%= companies[i].industry %></a> -->
               </li>
               <% } %>
 
@@ -53,6 +57,8 @@
 
       </section>
     </section>
+
+    <!-- bottom/ create New Company  -->
 
     <section class="createNewContainer">
       <section class="createNewCircle">
