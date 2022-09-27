@@ -45,7 +45,10 @@
           <ul class="list-unstyled profileList">
             <% for(var i=0; i<companies.length; i++) {%>
               <li class="col-6 justify-content-between mt-5">
-                <a href="<%= companies[i]._id %>"><%= companies[i].name %></a>
+                <a href="/company/<%= companies[i]._id %>"><%= companies[i].name %></a>
+                  <ul>
+                    <li><%= companies[i].website %></li>
+                  </ul>
                 <!-- <a href="#"><%= companies[i].name %></a> -->
                 <!-- <a href="#"><%= companies[i].website %></a> -->
                 <!-- <a href="#"><%= companies[i].industry %></a> -->
