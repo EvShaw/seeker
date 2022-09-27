@@ -1,17 +1,17 @@
 const mongoose = require("mongoose");
 
 const CompanySchema = new mongoose.Schema({
-  companyName: {
+  name: {
     type: String,
-    // required: [true, 'A company name is required'],
+    required: true,
   },
-  companyWebsite: {
+  website: {
     type: String, 
-    // required: true,
+    required: true,
   },
-  companyIndustry: {
+  industry: {
     type: String, 
-    // required: true,
+    required: true,
   },
   user: {
     type: mongoose.Schema.Types.ObjectId,

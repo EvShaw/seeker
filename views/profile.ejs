@@ -14,17 +14,16 @@
             <p>Create your first company!</p>
             <section class="mt-5">
               <h2>Create a new Company:</h2>
-              <form action="/company/createCompany" enctype="multipart/form-data" method="POST">
+              <form action="/company/createCompany" method="POST">
                 <section class="mb-3">
-                  <input type="text" class="form-control" id="companyName" name="companyName"
-                    placeholder="Company Name">
+                  <input type="text" class="form-control" id="companyName" name="name" placeholder="Company Name">
                 </section>
                 <section class="mb-3">
-                  <input type="text" class="form-control" id="companyWebsite" name="companyWebsite"
+                  <input type="text" class="form-control" id="companyWebsite" name="website"
                     placeholder="Company Website">
                 </section>
                 <section class="mb-3">
-                  <input type="text" class="form-control" id="industry" name="companyIndustry" placeholder="Industry">
+                  <input type="text" class="form-control" id="industry" name="industry" placeholder="Industry">
                 </section>
 
                 <button type="submit" class="btn btn-primary" value="Upload">Submit</button>
@@ -33,18 +32,23 @@
             <% } else if (companies.length==1) { %>
               <p>You have 1 company listed:</p>
               <% } else { %>
-                <p>You currently have <%= companies.length %> companies on your hitlist:</p>
+                <p>You currently have <%=companies.length%> companies on your hitlist:</p>
                 <% } %>
 
+        </section>
 
-                  <section class="listedCompanies">
-                    <h3>test</h3>
-                    <ul class="row list-unstyled">
-                      <% for(var i=0; i<companies.length; i++) {%>
-                        <li>yo</li>
-                        <% } %>
-                    </ul>
-                  </section>
+        <section class="listedCompanies">
+          <h3>
+            test
+          </h3>
+          <ul class="row list-unstyled">
+            <% for(var i=0; i<companies.length; i++) {%>
+              <li class="col-6 justify-content-between mt-5">
+                <a href="#"><%= companies[i].name %></a>
+              </li>
+              <% } %>
+
+          </ul>
         </section>
 
       </section>
@@ -52,10 +56,12 @@
 
     <section class="createNewContainer">
       <section class="createNewCircle">
-        <a href="/newCompany"><h1 class="createNew">+</h1></a>
+        <a href="/newCompany">
+          <h1 class="createNew">+</h1>
+        </a>
       </section>
       <h3>Create New Company</h3>
-     
+
     </section>
   </section>
 

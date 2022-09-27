@@ -18,11 +18,12 @@ module.exports = {
       // console.log(req.file.path) 
 
       await Company.create({
-        companyName: req.body.companyName,  
-        companyWebsite: req.body.companyWebsite,
-        companyIndustry: req.body.companyIndustry,
+        name: req.body.name,  
+        website: req.body.website,
+        industry: req.body.industry,
         user: req.user.id,
       });
+      console.log(req.body.name)
       console.log("A new company has been added!");
       res.redirect("/profile");
     } catch (err) {
