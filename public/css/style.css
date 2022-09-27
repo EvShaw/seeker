@@ -5,6 +5,16 @@
     display: flex;
     justify-content: center;
     height: auto;
+    position: absolute;
+    bottom: 60px;
+}
+
+.half {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 .createNewContainer {
     justify-content: center;

@@ -1,4 +1,3 @@
-const cloudinary = require("../middleware/cloudinary");
 const Company = require("../models/Company");
 
 
