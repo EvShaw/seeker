@@ -4,20 +4,20 @@
 
     <section class="mt-5">
       <h2>Create a new Company:</h2>
-      <form action="/company/createCompany" enctype="multipart/form-data" method="POST">
+      <form action="/company/createCompany" method="POST">
         <section class="mb-3">
-          <input type="text" class="form-control" id="companyName" name="companyName" placeholder="Company Name">
+          <input type="text" class="form-control" id="companyName" name="name"
+            placeholder="Company Name">
         </section>
         <section class="mb-3">
-          <input type="text" class="form-control" id="companyWebsite" name="companyWebsite"
+          <input type="text" class="form-control" id="companyWebsite" name="website"
             placeholder="Company Website">
         </section>
         <section class="mb-3">
-          <input type="text" class="form-control" id="industry" name="companyIndustry" placeholder="Industry">
+          <input type="text" class="form-control" id="industry" name="industry" placeholder="Industry">
         </section>
 
-
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary" value="Upload">Submit</button>
       </form>
     </section>
 
