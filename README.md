@@ -38,19 +38,6 @@
 
 </div>
 
-   This full stack application is being built, live and publicly. It is not finished and will be hosted once completed.
-    
-    The Hit List is a tool designed to help job seekers manage their network as they seek out and navigate through the process of obtaining the job of their choosing. 
-    <br />
-    Store, grow, and manage the list of companies you want while tracking contacts, communication, and follow ups to help you network your way passed modern day gatekeepers.  
-    <br />
-    <a href="https://github.com/EvShaw/theHitList"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-
-    <a href="https://github.com/EvShaw/theHitList/issues">Report Bug</a>
-    
-    <a href="https://github.com/EvShaw/theHitList/issues">Request Feature</a>
 
 
 <!-- TABLE OF CONTENTS -->
