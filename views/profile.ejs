@@ -1,54 +1,34 @@
 <%- include('partials/header') -%>
 
   <section class="container">
-    <section class="row ">
-      <section class="col-6">
+    <section class="">
+      <section class="flex wrapContent">
         <section>
           <p>Welcome back <%= user.userName %>
           </p>
-          <a href="/logout" class="col-3 btn btn-primary">Logout</a>
+          <a href="/logout" class="">Logout</a>
         </section>
 
-        
+
         <section class="mt-5 testBreak">
-
-          <% if (companies.length==0) { %>
-            <p>Create your first company!</p>
-            <section class="mt-5">
-              <h2>Create a new Company:</h2>
-              <form action="/company/createCompany" method="POST">
-                <section class="mb-3">
-                  <input type="text" class="form-control" id="companyName" name="name" placeholder="Company Name">
-                </section>
-                <section class="mb-3">
-                  <input type="text" class="form-control" id="companyWebsite" name="website"
-                    placeholder="Company Website">
-                </section>
-                <section class="mb-3">
-                  <input type="text" class="form-control" id="industry" name="industry" placeholder="Industry">
-                </section>
-
-                <button type="submit" class="btn btn-primary" value="Upload">Submit</button>
-              </form>
-            </section>
-            <% } else if (companies.length==1) { %>
-              <p>You have 1 company listed:</p>
-              <% } else { %>
-                <p>You currently have <%=companies.length%> companies on your hitlist:</p>
-                <% } %>
+          <p>You currently have <%=companies.length%> companies on your Hit List:</p>
+          <p>Your network has a total of <%=contacts.length%> people in it.</p>
         </section>
 
-        <section class="listedCompanies">
-          <h3>
-            test:
-          </h3>
+
+        <!-- company scroll window -->
+        <section class="windowDisplay">
           <ul class="list-unstyled profileList">
             <% for(var i=0; i<companies.length; i++) {%>
               <li class="col-6 justify-content-between mt-5">
-                <a href="/company/<%= companies[i]._id %>"><%= companies[i].name %></a>
-                  <ul>
-                    <li><%= companies[i].website %></li>
-                  </ul>
+                <a href="/company/<%= companies[i]._id %>">
+                  <%= companies[i].name %>
+                </a>
+                <ul>
+                  <li>
+                    <%= companies[i].website %>
+                  </li>
+                </ul>
                 <!-- <a href="#"><%= companies[i].name %></a> -->
                 <!-- <a href="#"><%= companies[i].website %></a> -->
                 <!-- <a href="#"><%= companies[i].industry %></a> -->
@@ -57,35 +37,43 @@
 
           </ul>
         </section>
-
       </section>
     </section>
+    <!-- contact scroll window -->
+    <!-- <section class="listedCompanies">
+            <ul class="list-unstyled profileList">
+              <% for(var i=0; i<contacts.length; i++) {%>
+                <li class="">
+                  <a href="/contacts/<%= contacts[i]._id %>">
+                    <%= contacts[i].name %>
+                  </a>
+                  <ul>
+                    <li>
+                      contact urk here
+                    </li>
+                  </ul>
+
+
+                </li>
+                <% } %>
+
+            </ul>
+          </section> -->
+
+
 
     <!-- bottom/ create New Company  -->
+    <section class="profileBot flex">
+      <section class="flex redBorder medPillShape">
+        <a href="/newCompany">
+          <i class="fa-solid fa-crosshairs"></i>
+        </a>
 
-    <section class="createNewContainer">
+        <h3 class="medText">Create New Company</h3>
 
-      <section class="half">
-        <section class="createNewCircle">
-          <a href="/newCompany">
-            <h1 class="createNew">+</h1>
-          </a>
-        </section>
-        <h3>Create New Company</h3>
-      </section>      
-
-      <section class="half">
-        <section class="createNewCircle">
-          <a href="/newContact">
-            <h1 class="createNew">+</h1>
-          </a>
-        </section>
-        <h3>Create New Contact</h3>
       </section>
-
     </section>
 
-  </section>
 
 
-  <%- include('partials/footer') -%>
+    <%- include('partials/footer') -%>
