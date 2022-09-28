@@ -36,7 +36,9 @@
 
 <h3 align="center">The Hit List</h3>
 
-    This full stack application is being built, live and publicly. It is not finished and will be hosted once completed.
+</div>
+
+   This full stack application is being built, live and publicly. It is not finished and will be hosted once completed.
     
     The Hit List is a tool designed to help job seekers manage their network as they seek out and navigate through the process of obtaining the job of their choosing. 
     <br />
@@ -49,9 +51,6 @@
     <a href="https://github.com/EvShaw/theHitList/issues">Report Bug</a>
     
     <a href="https://github.com/EvShaw/theHitList/issues">Request Feature</a>
-
-</div>
-
 
 
 <!-- TABLE OF CONTENTS -->
