@@ -1,11 +1,13 @@
 const Company = require("../models/Company");
+const Contact = require("../models/Contact");
 
 
 module.exports = {
   getProfile: async (req, res) => {
     try {
       const companies = await Company.find({ user: req.user.id }).sort({ createdAt: "asc" });
-      res.render("profile.ejs", { companies: companies, user: req.user });
+      const contacts = await Contact.find({ user: req.user.id })
+      res.render("profile.ejs", { companies: companies, user: req.user, contacts: contacts });
     } catch (err) {
       console.log(err);
     }

@@ -1,3 +1,5 @@
+<%- include('partials/header') -%>
+
 <section class="companyProfile">
     <h1>
         <%= company.name %>
@@ -10,15 +12,29 @@
 
 
             <form action="/company/deleteCompany/<%= company._id %>?_method=DELETE" method="POST">
-                <button class="btn btn-outline-danger" type="submit">Delete</button>
+                <button class="" type="submit">Delete</button>
             </form>
 
 
     </section>
+    <section class="createNewContainer">
 
+       
+        <section class="half">
+          <section class="createNewCircle">
+            <a href="/newContact">
+              <h1 class="createNew">+</h1>
+            </a>
+          </section>
+          <h3>Create New Contact</h3>
+        </section>
+  
+      </section>
     
 </section>
 
 <section>
     <a href="/profile">Back to your profile</a>
 </section>
+
+<%- include('partials/footer') -%>
