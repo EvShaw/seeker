@@ -15,9 +15,9 @@ module.exports = {
   getCompany: async (req, res) => {
   try {
     const company = await Company.findById(req.params.id);
-    // const contacts = await Comment.find({ post: req.params.id }).sort({ createdAt: "asc" }).lean();         
+    const contacts = await Contact.find({ company: req.params.id }).sort({createdAt: "desc"}).lean();
 
-    res.render("company.ejs", { company: company, user: req.user,});
+    res.render("company.ejs", { company: company, user: req.user, contacts: contacts});
   } catch (err) {
     console.log(err);
   }

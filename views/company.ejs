@@ -1,40 +1,67 @@
 <%- include('partials/header') -%>
 
-<section class="companyProfile">
+  <section class="companyProfile">
     <h1>
-        <%= company.name %>
+      <%= company.name %>
     </h1>
     <section class="companyInfo">
-        <a href="/profile">
-            <%= company.website %>
-        </a>
-        <%= company.industry %>
+      <a href="/profile">
+        <%= company.website %>
+      </a>
+      <%= company.industry %>
 
 
-            <form action="/company/deleteCompany/<%= company._id %>?_method=DELETE" method="POST">
-                <button class="" type="submit">Delete</button>
-            </form>
+        <form action="/company/deleteCompany/<%= company._id %>?_method=DELETE" method="POST">
+          <button class="" type="submit">Delete</button>
+        </form>
 
 
     </section>
     <section class="createNewContainer">
 
-       
-        <section class="half">
-          <section class="createNewCircle">
-            <a href="/newContact">
-              <h1 class="createNew">+</h1>
-            </a>
+      <section class="profileBot flex">
+        <section class="flex redBorder medPillShape">
+          <!-- <a href="/newContact/_id">
+            <i class="fa-solid fa-crosshairs"></i>
+          </a> -->
+
+          <!-- <h3 class="medText">Create New Contact</h3> -->
+
+          <section class="">
+            <h2>Add a Contact:</h2>
+            <form action="/contact/createContact/<%= company.id %>" method="POST" name="createContactForm">
+              <section class="">
+                <input type="text" class="" id="contactfirstName" name="firstName"
+                  placeholder="Contact First Name">
+              </section>
+              <button type="submit" class="" value="Upload">Submit</button>
+            </form>
+
           </section>
-          <h3>Create New Contact</h3>
         </section>
-  
       </section>
-    
-</section>
+    </section>
 
-<section>
+  </section>
+
+  <h2>Your contacts at this company:</h2>
+  <section class="companyContacts">
+    <ul class="">
+      <% for(var i=0; i<contacts.length; i++) {%>
+        <li class="">
+          <a href="/contact/<%= contacts[i]._id %>">
+            <%= contacts[i].firstName %>
+              <!-- <%= contacts[i].lastName %> -->
+          </a>
+        </li>
+        <% } %>
+
+    </ul>
+  </section>
+
+
+  <section>
     <a href="/profile">Back to your profile</a>
-</section>
+  </section>
 
-<%- include('partials/footer') -%>
+  <%- include('partials/footer') -%>

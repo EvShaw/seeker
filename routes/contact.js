@@ -7,7 +7,7 @@ const { ensureAuth, ensureGuest } = require("../middleware/auth");
 //Post Routes - simplified for now
 // router.get("/:id", ensureAuth, companyController.getCompany);
 
-router.post("/createContact", contactController.createContact);
+router.post("/createContact/:id", contactController.createContact);
 // router.post("/deletePost", upload.single("file"), postsController.createPost);
 
 // router.put("/likePost/:id", postsController.likePost);
