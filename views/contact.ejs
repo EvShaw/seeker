@@ -1,0 +1,19 @@
+<%- include('partials/header') -%>
+
+    <section class="contactInfo">
+        <%= contacts.firstName %>
+    </section>
+
+    <form action="/contact/deleteContact/<%= contacts.id %>?_method=DELETE" method="POST">
+        <button class="" type="submit">Delete <%= contacts.firstName %></button>
+    </form>
+
+
+    <section>
+        <a href="/company/<%= contacts.company %>">Back to Company display</a>
+    </section>
+    <section>
+        <a href="/profile">Back to your profile</a>
+    </section>
+
+    <%- include('partials/footer') -%>
