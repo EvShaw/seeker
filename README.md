@@ -37,7 +37,9 @@
 <h3 align="center">The Hit List</h3>
 
   <p align="center">
-    A tool designed to help job seekers manaage their network as they continue their hunt to find the job they deserve.
+    This full stack application is being built, live and publicly. It is not finished and will be hosted once completed.
+    
+    The Hit List is a tool designed to help job seekers manage their network as they seek out and navigate through the process of obtaining the job of their choosing. 
     <br />
     Store, grow, and manage the list of companies you want while tracking contacts, communication, and follow ups to help you network your way passed modern day gatekeepers.  
     <br />
