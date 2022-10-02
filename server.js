@@ -11,6 +11,7 @@ const connectDB = require("./config/database");
 const mainRoutes = require("./routes/main");
 const companyRoutes = require("./routes/company");
 const contactRoutes = require("./routes/contact");
+const meetingRoutes = require("./routes/meeting");
 
 //Use .env file in config folder: 
 require('dotenv').config({ path: './config/.env' })
@@ -60,6 +61,7 @@ app.use(flash())
 app.use("/", mainRoutes);
 app.use("/company", companyRoutes);
 app.use("/contact", contactRoutes);
+app.use("/meeting", meetingRoutes);
 
 
 //Server online

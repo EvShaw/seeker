@@ -9,11 +9,38 @@
     </form>
 
 
-    <section>
-        <a href="/company/<%= contacts.company %>">Back to Company display</a>
+
+
+
+    <section class="container">
+
+        <section class="">
+            <h2>Create a Meeting:</h2>
+            <form action="/createMeeting/<% contact.id %>" method="POST" name="createCompanyForm">
+                <section class="">
+                    <input type="text" class="" id="companyName" name="meetingDate" placeholder="Date of Meeting">
+                </section>
+                <section class="">
+                    <input type="text" class="" id="companyWebsite" name="meetingTime"
+                        placeholder="Time of Meeting">
+                </section>
+                <section class="">
+                    <input type="text" class="" id="industry" name="meetingType" placeholder="Type of Meeting">
+                </section>
+
+                <button type="submit" class="" value="Upload">Submit</button>
+            </form>
+        </section>
     </section>
+
+
+
     <section>
         <a href="/profile">Back to your profile</a>
     </section>
+    <section>
+        <a href="/company/<%= contacts.company %>">Back to Company display</a>
+    </section>
+
 
     <%- include('partials/footer') -%>
