@@ -14,6 +14,7 @@ router.post("/createCompany", companyController.createCompany);
 router.post("/createNewPosition/:id", companyController.createNewPosition);
 
 router.delete("/deleteCompany/:id", companyController.deleteCompany);
+router.delete("/deletePosition/:id", companyController.deletePosition);
 
 
 

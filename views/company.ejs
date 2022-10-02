@@ -13,13 +13,9 @@
 
       <br>
       <br>
-
-
-
     </section>
     
   </section>
-
 
   <!-- Positions at Company -->
   <h2>Open Role/Positions:</h2>
@@ -32,6 +28,11 @@
     <ul>
       <% for(var i=0; i<positions.length; i++) {%>
         <li><%= positions[i].positionTitle %></li>
+
+        <form action="/company/deletePosition/<%= positions[i].id%>?_method=DELETE" method="POST">
+          <button class="btn btn-outline-danger" type="submit">Delete</button>
+        </form>
+        
         <% } %>
 
     </ul>
@@ -76,8 +77,6 @@
   <section>
     <a href="/profile">Back to your profile</a>
   </section>
-
-
 
 <!-- <section class="createNewContainer">
 
