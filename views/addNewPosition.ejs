@@ -1,0 +1,28 @@
+<%- include('partials/header') -%>
+
+
+    <section class="">
+        <h2>Create a New Position for <%= company.name %>
+        </h2>
+    </section>
+
+    <section>
+        <form action="/company/createNewPosition/<%= company.id %>" method="POST">
+
+            <label for="positionTitle">Position Title</label>
+            <input type="text" class="form-control" id="positionTitle" name="positionTitle" placeholder="Position Title">
+            
+
+            <label for="sourceURL">Job URL</label>
+            <input type="text" class="form-control" id="positionTitle" name="sourceURL" placeholder="Job Source URL">
+
+            <button type="submit" class="" value="Upload">Submit</button>
+        </form>
+    </section>
+
+ 
+    <section>
+        <a href="/company/<%= company.id %>">Back to <%= company.name %></a>
+    </section>
+
+    <%- include('partials/footer') -%>
