@@ -47,8 +47,8 @@
 
     <ul>
       <% for(var i=0; i<contacts.length; i++) {%>
-        <li><%= contacts[i].firstName %></li>
-        <li><%= contacts[i].lastName %></li>
+        <li><%= contacts[i].firstName %> <%= contacts[i].lastName %> <%= contacts[i].contactTitle %></li>
+       
 
         <form action="/company/deletecontact/<%= contacts[i].id%>?_method=DELETE" method="POST">
           <button class="btn btn-outline-danger" type="submit">Delete</button>
