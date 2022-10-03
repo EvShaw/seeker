@@ -25,7 +25,6 @@ module.exports = {
       const dateCreated = company.createdAt
       console.log(company)
 
-
       res.render("company.ejs", { company: company, user: req.user, contacts: contacts, positions: positions });
     } catch (err) {
       console.log(err);
@@ -82,11 +81,41 @@ module.exports = {
     }
   },
   deletePosition: async (req, res) => {
+   
     try {
       const position = await Position.findById({ _id: req.params.id})
+  
+      await Position.deleteOne({ _id: position.id })
+      console.log(`Deleting ${position.id}`);
+
+      res.redirect(`/company/${position.company}`)
      
     } catch(err) {
       console.error(err)
     }
-  }
+  },
+  addNewContact: async (req, res) => {
+
+    try {
+
+    } catch(err) {
+      console.error(err)
+    }
+  },
+  createNewContact: async (req, res) => {
+
+    try {
+
+    } catch(err) {
+      console.error(err)
+    }
+  },
+  deleteNewContact: async (req, res) => {
+
+    try {
+
+    } catch(err) {
+      console.error(err)
+    }
+  },
 }
