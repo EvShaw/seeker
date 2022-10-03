@@ -28,7 +28,6 @@ module.exports = {
     }
   },
   addNewCompany: async (req, res) => {
-//    console.log(req.user.id)
     res.render('addNewCompany.ejs', {user: req.user.id})
   },
   createNewCompany: async (req, res) => {
