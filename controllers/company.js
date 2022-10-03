@@ -48,13 +48,22 @@ module.exports = {
 
   },
   deleteCompany: async (req, res) => {
-    // try {
-    //   await Company.deleteOne({ _id: req.params.id })
-    //   console.log(`Deleting ${req.params.id}`);
-    //   res.redirect("/profile");
-    // } catch (err) {
-    //   console.error(err)
-    // }
+    console.log('deleting the company!')
+   
+    try {
+      const company = await Company.findById(req.params.id);
+
+      const contacts = await Contact.find({ company: req.params.id});
+      const positions = await Position.find({ company: req.params.id});
+      
+      await Position.deleteMany({company: req.params.id })
+      await Contact.deleteMany({company: req.params.id })
+      await Company.deleteOne({ _id: req.params.id})
+
+      res.redirect(`/profile`);
+    } catch (err) {
+      console.error(err)
+    }
   },
   addNewPosition: async (req, res) => {
     console.log('lets make a new role!!')
