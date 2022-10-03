@@ -12,7 +12,6 @@ router.get("/addNewPosition/:id", companyController.addNewPosition);
 router.get("/addNewContact/:id", companyController.addNewContact);
 
 
-
 router.post("/createNewCompany", companyController.createNewCompany);
 router.post("/createNewPosition/:id", companyController.createNewPosition);
 router.post("/createNewContact/:id", companyController.createNewContact);
@@ -20,6 +19,7 @@ router.post("/createNewContact/:id", companyController.createNewContact);
 router.delete("/deleteCompany/:id", companyController.deleteCompany);
 router.delete("/deletePosition/:id", companyController.deletePosition);
 router.delete("/deleteContact/:id", companyController.deleteContact);
+router.delete("/deleteCompany/:id", companyController.deleteCompany);
 
 
 module.exports = router;
