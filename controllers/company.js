@@ -20,22 +20,24 @@ module.exports = {
     try {
       const company = await Company.findById(req.params.id);
       const positions = await Position.find({ company: req.params.id })
-
-      // something with it here:
       const contacts = await Contact.find({ company: req.params.id })
-      console.log(`here are your contacts: ${company}`)
 
       res.render("company.ejs", { company: company, user: req.user, contacts: contacts, positions: positions });
     } catch (err) {
       console.log(err);
     }
   },
-  createCompany: async (req, res) => {
+  addNewCompany: async (req, res) => {
+//    console.log(req.user.id)
+    res.render('addNewCompany.ejs', {user: req.user.id})
+  },
+  createNewCompany: async (req, res) => {
+
     try {
       await Company.create({
-        name: req.body.name,
-        website: req.body.website,
-        industry: req.body.industry,
+        companyName: req.body.companyName,
+        companyWebsite: req.body.companyWebsite,
+        companyIndustry: req.body.companyIndustry,
         user: req.user.id,
       });
       console.log("A new company has been added!");
@@ -43,19 +45,19 @@ module.exports = {
     } catch (err) {
       console.log(err);
     }
+
   },
   deleteCompany: async (req, res) => {
-    try {
-      await Company.deleteOne({ _id: req.params.id })
-      console.log(`Deleting ${req.params.id}`);
-      res.redirect("/profile");
-    } catch (err) {
-      console.error(err)
-    }
+    // try {
+    //   await Company.deleteOne({ _id: req.params.id })
+    //   console.log(`Deleting ${req.params.id}`);
+    //   res.redirect("/profile");
+    // } catch (err) {
+    //   console.error(err)
+    // }
   },
   addNewPosition: async (req, res) => {
     console.log('lets make a new role!!')
-    console.log(req.params.id)
     try {
       const company = await Company.findById(req.params.id);
 
@@ -81,16 +83,16 @@ module.exports = {
     }
   },
   deletePosition: async (req, res) => {
-   
+
     try {
-      const position = await Position.findById({ _id: req.params.id})
-  
+      const position = await Position.findById({ _id: req.params.id })
+
       await Position.deleteOne({ _id: position.id })
       console.log(`Deleting ${position.id}`);
 
       res.redirect(`/company/${position.company}`)
-     
-    } catch(err) {
+
+    } catch (err) {
       console.error(err)
     }
   },
@@ -100,7 +102,7 @@ module.exports = {
       const company = await Company.findById(req.params.id);
 
       res.render('addNewContact.ejs', { company: company, user: req.user, })
-    } catch(err) {
+    } catch (err) {
       console.error(err)
     }
   },
@@ -114,18 +116,25 @@ module.exports = {
         contactWebsite: req.body.contactWebsite,
         contactLinkedIn: req.body.contactLinkedIn,
         contactTwitter: req.body.contactTwitter,
+        company: req.params.id,
+        user: req.user.id,
       })
 
       res.redirect(`/company/${req.params.id}`);
-    } catch(err) {
+    } catch (err) {
       console.error(err)
     }
   },
-  deleteNewContact: async (req, res) => {
+  deleteContact: async (req, res) => {
     console.log('')
     try {
+      const contact = await Contact.findById({ _id: req.params.id })
 
-    } catch(err) {
+      await Contact.deleteOne({ _id: contact.id })
+      console.log(`Deleting ${contact.id}`);
+
+      res.redirect(`/company/${contact.company}`)
+    } catch (err) {
       console.error(err)
     }
   },

@@ -23,10 +23,12 @@
             <% for(var i=0; i<companies.length; i++) {%>
               <li class="">
                 <a href="/company/<%= companies[i]._id %>">
-                  <%= companies[i].name %>
+                  <%= companies[i].companyName %>
                 </a>
                 <ul>
                   <li>
+                    <i class="fa-solid fa-user-group"></i>
+                    <i class="fa-solid fa-crosshairs"></i>
                     <%= companies[i].website %>
                   </li>
                 </ul>
@@ -37,16 +39,18 @@
         </section>
       </section>
     </section>
-   
+
 
     <!-- bottom/ create New Company  -->
-    <section class="profileBot flex">
-      <section class="flex redBorder medPillShape">
-        <a href="/newCompany">
-          <i class="fa-solid fa-crosshairs"></i>
+    <section class="">
+      <section class="">
+        <a href="/addNewCompany">
+          <i class="fa-solid fa-crosshairs">
+            <h3 class="medText">Create New Company</h3>
+          </i>
         </a>
 
-        <h3 class="medText">Create New Company</h3>
+
 
       </section>
     </section>
