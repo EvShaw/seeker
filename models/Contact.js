@@ -5,18 +5,23 @@ const ContactSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  // lastName: {
-  //   type: String,
-  //   required: true,
-  // },
-  // contactWebsite: {
-  //   type: String, 
-  //   required: true,
-  // },
-  // contactTitle: {
-  //   type: String, 
-  //   required: true,
-  // },
+  lastName: {
+    type: String,
+    required: true,
+  },
+  contactTitle: {
+    type: String, 
+    required: true,
+  },
+  contactWebsite: {
+    type: String, 
+  },
+  contactLinkedIn: {
+    type: String, 
+  },
+  contactTwitter: {
+    type: String, 
+  },
   company: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "Company",

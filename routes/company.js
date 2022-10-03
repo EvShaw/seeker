@@ -8,10 +8,12 @@ const { ensureAuth, ensureGuest } = require("../middleware/auth");
 router.get("/:id", ensureAuth, companyController.getCompany);
 
 router.get("/addNewPosition/:id", companyController.addNewPosition);
+router.get("/addNewContact/:id", companyController.addNewContact);
 
 
 router.post("/createCompany", companyController.createCompany);
 router.post("/createNewPosition/:id", companyController.createNewPosition);
+router.post("/createNewContact/:id", companyController.createNewContact);
 
 router.delete("/deleteCompany/:id", companyController.deleteCompany);
 router.delete("/deletePosition/:id", companyController.deletePosition);

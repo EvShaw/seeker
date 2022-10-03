@@ -19,7 +19,6 @@
 
   <!-- Positions at Company -->
   <h2>Open Role/Positions:</h2>
-
   <section class="openPositions">
 
     <!-- create a new role/position -->
@@ -36,9 +35,6 @@
         <% } %>
 
     </ul>
-
-    <!-- Loop and list positions that have been added -->
-
   </section>
 
 
@@ -46,25 +42,44 @@
   <section class="companyContacts">
     <h2>Contacts at this company:</h2>
 
-    <a href="/company/createNew/<%= company._id %>"><i class="fa-solid fa-circle-plus"></i> Add a new contact</a>
+    <a href="/company/addNewContact/<%= company._id %>"><i class="fa-solid fa-circle-plus"></i> Add a new contact</a>
+
+
+    <ul>
+      <% for(var i=0; i<contacts.length; i++) {%>
+        <li><%= contacts[i].firstName %></li>
+        <li><%= contacts[i].lastName %></li>
+
+        <form action="/company/deletecontact/<%= contacts[i].id%>?_method=DELETE" method="POST">
+          <button class="btn btn-outline-danger" type="submit">Delete</button>
+        </form>
+        
+        <% } %>
+
+    </ul>
+
+
   </section>
 
 
 
 
+
+
+<!-- 
   <section class="companyContacts">
     <ul class="">
       <% for(var i=0; i<contacts.length; i++) {%>
         <li class="">
           <a href="/contact/<%= contacts[i]._id %>">
             <%= contacts[i].firstName %>
-              <!-- <%= contacts[i].lastName %> -->
+              <%= contacts[i].lastName %>
           </a>
         </li>
         <% } %>
 
     </ul>
-  </section>
+  </section> -->
 
 
   <!-- REMINDER: remove the hr when styling -->
@@ -78,22 +93,7 @@
     <a href="/profile">Back to your profile</a>
   </section>
 
-<!-- <section class="createNewContainer">
 
-      <section class="profileBot flex">
-        <section class="flex redBorder medPillShape">
-          <section class="">
-            <h2>Add a Contact:</h2>
-            <form action="/contact/createContact/<%= company.id %>" method="POST" name="createContactForm">
-              <section class="">
-                <input type="text" class="" id="contactfirstName" name="firstName" placeholder="Contact First Name">
-              </section>
-              <button type="submit" class="" value="Upload">Submit</button>
-            </form>
 
-          </section>
-        </section>
-      </section>
-    </section> -->
 
   <%- include('partials/footer') -%>
