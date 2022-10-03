@@ -19,11 +19,11 @@ module.exports = {
   getCompany: async (req, res) => {
     try {
       const company = await Company.findById(req.params.id);
-      const contacts = await Contact.find({ company: req.params.id }).sort({ createdAt: "desc" }).lean();
       const positions = await Position.find({ company: req.params.id })
 
-      const dateCreated = company.createdAt
-      console.log(company)
+      // something with it here:
+      const contacts = await Contact.find({ company: req.params.id })
+      console.log(`here are your contacts: ${company}`)
 
       res.render("company.ejs", { company: company, user: req.user, contacts: contacts, positions: positions });
     } catch (err) {
@@ -95,23 +95,34 @@ module.exports = {
     }
   },
   addNewContact: async (req, res) => {
-
+    console.log('')
     try {
+      const company = await Company.findById(req.params.id);
 
+      res.render('addNewContact.ejs', { company: company, user: req.user, })
     } catch(err) {
       console.error(err)
     }
   },
   createNewContact: async (req, res) => {
-
+    console.log('new contacted created')
     try {
+      await Contact.create({
+        firstName: req.body.firstName,
+        lastName: req.body.lastName,
+        contactTitle: req.body.contactTitle,
+        contactWebsite: req.body.contactWebsite,
+        contactLinkedIn: req.body.contactLinkedIn,
+        contactTwitter: req.body.contactTwitter,
+      })
 
+      res.redirect(`/company/${req.params.id}`);
     } catch(err) {
       console.error(err)
     }
   },
   deleteNewContact: async (req, res) => {
-
+    console.log('')
     try {
 
     } catch(err) {
