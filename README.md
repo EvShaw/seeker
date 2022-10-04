@@ -31,8 +31,7 @@
 <br />
 <div align="center">
   <a href="https://https://github.com/EvShaw/theHitList">
-    <img src="https://github.com/EvShaw/seeker/blob/main/public/assets/seekerLogo.png" alt="Logo" width="80" height="80">
- 
+    <img src="/assets/seekerLogo.png" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">Seeker</h3>
@@ -71,12 +70,14 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
+  Seeker is a modern tool designed to provide and assist the job seeker with the tools needed to network their way past the challenges faced when 'hunting' for their next opportunity. 
 
-   This full stack application is being built, live and publicly. It is not finished and will be hosted once completed.
-    
-  Seeker is a tool designed to help job seekers manage their network as they seek out and navigate through the process of obtaining the job of their choosing. 
-  <br />
-  Store, grow, and manage the list of companies you want while tracking contacts, communication, and follow ups to help you network your way through an evolved process with precision. 
+  This full stack CRUD application utilizes an MVC architectural layout to provide a clean, well organized, and structured application that is both easy to maintain as well as being scale as needed. 
+  
+  Containing multiple databases that communicate and link togther, a networked list of companies, contacts and open positions is created. Giving every job seeker not only the advantage they need to lock down their next opportunity but a way to manage it as well.   
+  
+  Utilizing local authentication, a seamless login experience is obtained while also providing the security needed to ensure the multitide of databases as well as information given by a user is protected. 
+      
   <br />
   <a href="https://github.com/EvShaw/theHitList"><strong>Explore the docs »</strong></a>
   <br />

@@ -1,9 +1,12 @@
+@import url(https://fonts.googleapis.com/css?family=Poiret+One);
 @import 'config';
 @import 'home';
+@import 'login';
+@import 'signup';
+@import 'profile';
 
 body {
-    background: #fff;
-    // background: $primary-color;
+    
     color: #fff;
     height: 100vh;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;

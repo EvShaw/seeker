@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Poiret+One);
 * {
   box-sizing: border-box;
   margin: 0;
@@ -9,27 +10,61 @@
   padding-top: 70vh;
   align-items: center;
   text-align: center;
-  background: linear-gradient(to right, rgba(39, 39, 39, 0.9), rgba(39, 39, 39, 0.3)), url("../assets/honey-yanibel-minaya-cruz-6gSyEKq4Pvg-unsplash.png") center center no-repeat;
-  background-size: contain;
+  background: linear-gradient(to right, rgba(39, 39, 39, 0.9), rgba(39, 39, 39, 0.3)), url("../assets/compassGraphic-removebg-preview.png") 50% 50% no-repeat;
+  background-size: 100%, 50%;
 }
 .home__login {
   font-size: 3.6rem;
   margin-top: 1rem;
   margin-right: 1rem;
+  font-family: "Poiret One";
+}
+.home__login:hover {
+  color: #bfbfbf;
 }
 .home__signup {
   font-size: 3.6rem;
   margin-top: 1rem;
   color: #ff652f;
   font-weight: 700;
+  font-family: "Poiret One";
+}
+.home__signup:hover {
+  color: #fb4100;
 }
 .home__underScore {
   border-bottom: 2px solid #fff;
   padding-bottom: 1rem;
 }
 
+.login {
+  height: 100%;
+  padding-top: 50vh;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(to right, rgba(39, 39, 39, 0.9), rgba(39, 39, 39, 0.3));
+}
+
+.signup {
+  height: 100%;
+  padding-top: 50vh;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(to right, rgba(39, 39, 39, 0.9), rgba(39, 39, 39, 0.3));
+}
+.signup .secondary-text {
+  color: #ff652f;
+}
+
+.profile {
+  height: 100%;
+  padding-top: 50vh;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(to right, rgba(39, 39, 39, 0.9), rgba(39, 39, 39, 0.3));
+}
+
 body {
-  background: #fff;
   color: #fff;
   height: 100vh;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;

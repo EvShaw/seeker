@@ -7,31 +7,36 @@
         linear-gradient(to right,
             rgba($primary-color, 0.9),
             rgba($primary-color, 0.3)),
-        
-        url('../assets/honey-yanibel-minaya-cruz-6gSyEKq4Pvg-unsplash.png') center center no-repeat;
-    background-size: contain;
-    
 
-    &__main {
-       
-    }
+        url('../assets/compassGraphic-removebg-preview.png') 50% 50% no-repeat;
+    background-size: 100%, 50%;
 
     &__login {
         font-size: 3.6rem;
         margin-top: 1rem;
         margin-right: 1rem;
+        font-family: 'Poiret One';
 
+        &:hover {
+            color: darken($white-text, 25%)
+        }
     }
     &__signup {
         font-size: 3.6rem;
-        margin-top: 1rem;      
+        margin-top: 1rem;
         color: $secondary-color;
         font-weight: 700;
+        font-family: 'Poiret One';
+
+        &:hover {
+            color: darken($secondary-color, 10%)
+        }
+
        
     }
+
     &__underScore {
         border-bottom: 2px solid #fff;
         padding-bottom: 1rem;
     }
-
 }
