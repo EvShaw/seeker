@@ -1,14 +1,14 @@
 <%- include('partials/header') -%>
 
-  <section class="profile">
-    <section class="">
+
+  <!-- <section class="profile"> -->
+  <!-- <section class="">
       <section class="">
         <section>
           <p>Welcome back <%= user.userName %>
           </p>
           <a href="/logout" class="">Logout</a>
         </section>
-
 
         <section class="">
           <p>You currently have <%=companies.length%> companies on your Hit List:</p>
@@ -17,7 +17,7 @@
         </section>
 
 
-        <!-- company scroll window -->
+        
         <section class="">
           <ul class="">
             <% for(var i=0; i<companies.length; i++) {%>
@@ -38,23 +38,64 @@
           </ul>
         </section>
       </section>
-    </section>
+    </section> -->
 
 
-    <!-- bottom/ create New Company  -->
-    <section class="">
-      <section class="">
-        <a href="/addNewCompany">
-          <i class="fa-solid fa-crosshairs">
-            <h3 class="">Create New Company</h3>
-          </i>
-        </a>
-
-
-
+  <section class="main">
+    <section class="profile">
+      <section class="profile__bio-image">
+        <section class="profile__bio">
+          <h2 class="text-secondary">Seeker</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae hic maiores eius ad, quidem dicta nobis
+            velit iure eum deleniti suscipit necessitatibus laborum sunt odio quo iusto deserunt atque. Fugit.</p>
+        </section>
       </section>
+
+
+      <section class="profile__jobs">
+        <section class="jobs">
+          <section class="jobs__job">
+            <h2 class="text-secondary">Right Now</h2>
+            <h3>Company Name</h3>
+            <h6>Position Title</h6>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam, hic quisquam doloribus asperiores fuga
+              aliquid? Excepturi facilis eum quibusdam possimus.</p>
+          </section>
+          <section class="jobs__job">
+            <h2 class="text-secondary">Right Now</h2>
+            <h3>Company Name</h3>
+            <h6>Position Title</h6>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam, hic quisquam doloribus asperiores fuga
+              aliquid? Excepturi facilis eum quibusdam possimus.</p>
+          </section>
+          <section class="jobs__job">
+            <h2 class="text-secondary">Right Now</h2>
+            <h3>Company Name</h3>
+            <h6>Position Title</h6>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam, hic quisquam doloribus asperiores fuga
+              aliquid? Excepturi facilis eum quibusdam possimus.</p>
+          </section>
+        </section>
+      </section>
+
     </section>
+  </section>
+
+  <!-- bottom/ create New Company  -->
+  <section class="">
+    <section class="">
+      <a href="/addNewCompany">
+        <i class="fa-solid fa-crosshairs">
+
+        </i>
+        <span>New company</span>
+      </a>
 
 
 
-    <%- include('partials/footer') -%>
+    </section>
+  </section>
+
+
+
+  <%- include('partials/footer') -%>

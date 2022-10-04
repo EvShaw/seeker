@@ -56,11 +56,57 @@
 }
 
 .profile {
-  height: 100%;
-  padding-top: 50vh;
+  padding-bottom: 2rem;
+}
+.profile__bio-image {
+  height: 40vh;
+  width: 100%;
+  background: linear-gradient(to right, rgba(39, 39, 39, 0.8), rgba(39, 39, 39, 0.2)), url("../assets/compassGraphic-removebg-preview.png") 50% 50% no-repeat;
+  background-size: 100%, 300px;
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: flex-end;
+}
+.profile p {
+  margin-bottom: 2rem;
+}
+.profile__jobs {
+  background: #272727;
+  height: 100vh;
+  padding-top: 2rem;
+}
+.profile__bio {
+  width: 80%;
   text-align: center;
-  background: linear-gradient(to right, rgba(39, 39, 39, 0.8), rgba(39, 39, 39, 0.2));
+}
+.profile__bio .text-secondary {
+  padding-bottom: 1rem;
+}
+.profile .jobs {
+  width: 40vw;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 2rem;
+}
+.profile .jobs__job {
+  background: #414141;
+  padding: 0.5rem;
+  border-bottom: 5px solid #ff652f;
+}
+.profile .jobs__job h2, .profile .jobs__job h3 {
+  margin: 0.5rem 0;
+}
+.profile .jobs__job h6 {
+  margin: 0.3rem 0;
+}
+.profile .social-icons {
+  display: flex;
+  flex-direction: column;
+}
+.profile footer {
+  transform: rotate(90deg) translate(-3rem, -5rem);
 }
 
 .menu-btn {
@@ -195,8 +241,11 @@ a {
   text-decoration: none;
 }
 
+.text-secondary {
+  color: #ff652f;
+}
+
 header {
-  background: linear-gradient(to right, rgba(39, 39, 39, 0.8), rgba(39, 39, 39, 0.2));
   position: fixed;
   z-index: 2;
   width: 100%;
