@@ -2,7 +2,7 @@
 
   <section class="profile">
     <section class="">
-      <section class="flex wrapContent">
+      <section class="">
         <section>
           <p>Welcome back <%= user.userName %>
           </p>
@@ -10,7 +10,7 @@
         </section>
 
 
-        <section class="mt-5 testBreak">
+        <section class="">
           <p>You currently have <%=companies.length%> companies on your Hit List:</p>
           <p>Your network has a total of <%=contacts.length%> people in it.</p>
           <p>Your Hit List has a total of <%=positions.length%> positions!</p>
@@ -18,8 +18,8 @@
 
 
         <!-- company scroll window -->
-        <section class="windowDisplay">
-          <ul class="profileList">
+        <section class="">
+          <ul class="">
             <% for(var i=0; i<companies.length; i++) {%>
               <li class="">
                 <a href="/company/<%= companies[i]._id %>">
@@ -46,7 +46,7 @@
       <section class="">
         <a href="/addNewCompany">
           <i class="fa-solid fa-crosshairs">
-            <h3 class="medText">Create New Company</h3>
+            <h3 class="">Create New Company</h3>
           </i>
         </a>
 
