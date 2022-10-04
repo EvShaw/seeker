@@ -1,5 +1,5 @@
 {
-  "name": "thehitlist",
+  "name": "seeker",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/EvShaw/theHitList.git"
+    "url": "git+https://github.com/EvShaw/seeker.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/EvShaw/theHitList/issues"
+    "url": "https://github.com/EvShaw/seeker/issues"
   },
-  "homepage": "https://github.com/EvShaw/theHitList#readme",
+  "homepage": "https://github.com/EvShaw/seeker#readme",
   "dependencies": {
     "bcrypt": "^5.0.1",
     "cloudinary": "^1.32.0",

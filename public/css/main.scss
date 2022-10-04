@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Poiret+One);
+// @import url(https://fonts.googleapis.com/css?family=Poiret+One);
 @import 'config';
 @import 'home';
 @import 'login';
@@ -7,7 +7,7 @@
 
 body {
     
-    color: #fff;
+    color: set-text-color($primary-color);
     height: 100vh;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1;
@@ -20,7 +20,7 @@ h3 {
 }
 
 a {
-    color: #fff;
+    color: set-text-color($primary-color);
     text-decoration: none;
 }
 
@@ -57,6 +57,7 @@ footer {
     right: 1rem;
     text-align: right;
     padding: 1rem;
+    color: set-text-color($primary-color);
 
     & a {
         color: $secondary-color;    
