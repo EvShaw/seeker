@@ -30,7 +30,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://https://github.com/EvShaw/theHitList">
+  <a href="https://https://github.com/EvShaw/seeker">
     <img src="https://github.com/EvShaw/seeker/blob/main/public/assets/seekerLogo.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -79,13 +79,13 @@
   Utilizing local authentication, a seamless login experience is obtained while also providing the security needed to ensure the multitide of databases as well as information given by a user is protected. 
       
   <br />
-  <a href="https://github.com/EvShaw/theHitList"><strong>Explore the docs »</strong></a>
+  <a href="https://github.com/EvShaw/seeker"><strong>Explore the docs »</strong></a>
   <br />
   <br />
 
-  <a href="https://github.com/EvShaw/theHitList/issues">Report Bug</a>
+  <a href="https://github.com/EvShaw/seeker/issues">Report Bug</a>
   
-  <a href="https://github.com/EvShaw/theHitList/issues">Request Feature</a>
+  <a href="https://github.com/EvShaw/seeker/issues">Request Feature</a>
 
 
 
