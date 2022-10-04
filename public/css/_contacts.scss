@@ -1,4 +1,4 @@
-.profile {
+.contacts {
     // height: 100%;
     // padding-top: 50vh;
     // align-items: center;
@@ -7,7 +7,7 @@
     //     linear-gradient(to right,
     //         rgba($primary-color, 0.8),
     //         rgba($primary-color, 0.2)),
-
+ 
     padding-bottom: 2rem;
 
     &__bio-image {
@@ -16,7 +16,8 @@
         background:
             linear-gradient(to right,
                 rgba($primary-color, 0.8),
-                rgba($primary-color, 0.2)),
+                rgba($primary-color, 0.2)
+            ),
             url('../assets/compassGraphic-removebg-preview.png') 50% 50% no-repeat;
         background-size: 100%, 300px;
         display: flex;
@@ -26,7 +27,7 @@
 
     }
 
-    .pText {
+    p {
         margin-bottom: 2rem;
     }
 
@@ -39,14 +40,9 @@
     &__bio {
         width: 80%;
         text-align: center;
-        margin-bottom: 1rem;
 
         .text-secondary {
             padding-bottom: 1rem;
-        }
-
-        h2 {
-            font-size: 3.6rem;
         }
     }
 
@@ -57,51 +53,29 @@
         grid-template-columns: 1fr;
         grid-gap: 2rem;
 
-        &__header {
-            background: lighten($primary-color, 10%);
-            padding: .5rem;
-            border-bottom: 5px solid $secondary-color;
-            text-align: center;
-
-            & a:hover {
-                color: $secondary-color;
-                @include trasition-ease;
-              
-                margin: 0 auto;
-                // color: darken(set-text-color($primary-color), 25%);
-            }
-        }
-
         &__job {
             background: lighten($primary-color, 10%);
             padding: .5rem;
-            border-left: 5px solid $secondary-color;
+            border-bottom: 5px solid $secondary-color;
 
-            h2,
-            h3 {
+            h2, h3 {
                 margin: .5rem 0;
 
             }
-
             h6 {
                 margin: .3rem 0;
-            }
-
-            &:hover {
-                background: lighten($primary-color, 20%);
-                @include trasition-ease;
             }
         }
     }
 
+    .social-icons {
+        display: flex;
+        flex-direction: column;
+    }
 
-.social-icons {
-    display: flex;
-    flex-direction: column;
-}
-
-footer {
-    transform:
-        rotate(90deg) translate(-3rem, -5rem);
-}
+    footer {
+        transform: 
+            rotate(90deg)
+            translate(-3rem, -5rem);
+    }
 }
