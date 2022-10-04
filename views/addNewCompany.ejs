@@ -1,34 +1,47 @@
 <%- include('partials/header') -%>
 
-<section class="addNew">
-  
+  <section class="addNew">
 
-<h2>Create a New Company:</h2>
-<section>
-  <form action="/company/createNewCompany" method="POST" name="createCompanyForm">
+    <section class="addNewForm">
 
-    <!-- Company Name -->
-    <label for="companyName">Company Name:</label>
-    <input type="text" class="form-control" id="companyName" name="companyName" placeholder="Company Name">
+      <h2 class="addNewTitle">Create a New Company:</h2>
+      <section class="formSection">
+        <form action="/company/createNewCompany" method="POST" name="createCompanyForm">
 
-    <!-- Company Website -->
-    <label for="companyWebsite">Company Website:</label>
-    <input type="text" class="form-control" id="companyName" name="companyWebsite" placeholder="Company Website">
+          <!-- Company Name -->
+          <section class="inputSection">
+            <label for="companyName" class="addNewLabel">Company Name:</label>
+            <input type="text" class="form-control addNewInput" id="companyName" name="companyName"
+              placeholder="Company Name">
+          </section>
 
-    <!-- Company Industry -->
-    <label for="companyIndustry">Company Industry:</label>
-    <input type="text" class="form-control" id="ompanyIndustry" name="companyIndustry" placeholder="Company Industry">
-
-
-    <button type="submit" class="" value="Upload">Submit</button>
-  </form>
-</section>
+          <!-- Company Website -->
+          <section class="inputSection">
+            <label for="companyWebsite" class="addNewLabel">Company Website:</label>
+            <input type="text" class="form-control addNewInput" id="companyName" name="companyWebsite"
+              placeholder="Company Website">
+          </section>
 
 
+          <!-- Company Industry -->
+          <section class="inputSection">
+            <label for="companyIndustry" class="addNewLabel">Company Industry:</label>
+            <input type="text" class="form-control addNewInput" id="ompanyIndustry" name="companyIndustry"
+              placeholder="Company Industry">
 
-<section>
-  <a href="/profile">Back to your profile</a>
-</section>
-</section>
+
+          </section>
+
+          <button type="submit" class="addNewBTN" value="Upload">Submit</button>
+        </form>
+      </section>
+
+
+    </section>
+
+    <section class="goBack">
+      <a href="/profile">Back to your profile</a>
+    </section>
+  </section>
 
   <%- include('partials/footer') -%>

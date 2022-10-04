@@ -1,32 +1,55 @@
 <%- include('partials/header') -%>
 
 
-    <section class="addNew">
-        <h2>Create a New Position for <%= company.name %>
-        </h2>
 
 
-        <section>
-            <form action="/company/createNewPosition/<%= company.id %>" method="POST">
-
-                <label for="positionTitle">Position Title</label>
-                <input type="text" class="form-control" id="positionTitle" name="positionTitle"
-                    placeholder="Position Title">
 
 
-                <label for="sourceURL">Job URL</label>
-                <input type="text" class="form-control" id="positionTitle" name="sourceURL"
-                    placeholder="Job Source URL">
+    <%- include('partials/header') -%>
 
-                <button type="submit" class="" value="Upload">Submit</button>
-            </form>
+        <section class="addNew">
+
+            <section class="addNewForm">
+
+                <h2 class="addNewTitle">Create a New Position for <%= company.companyName %>:</h2>
+                <section class="formSection">
+                    <form action="/company/createNewPosition/<%= company.id %>" method="POST" name="createCompanyForm">
+                   
+
+
+                    <!-- positionTitle-->
+                    <section class="inputSection">
+                        <label for="positionTitle" class="addNewLabel">Position Title:</label>
+                        <input type="text" class="form-control addNewInput" id="companyName" name="positionTitle"
+                            placeholder="Position Title">
+                    </section>
+
+                    <!-- sourceURL -->
+                    <section class="inputSection">
+                        <label for="sourceURL" class="addNewLabel">Source URL:</label>
+                        <input type="text" class="form-control addNewInput" id="sourceURL" name="sourceURL"
+                            placeholder="Source URL">
+                    </section>
+
+                </section>
+
+                <button type="submit" class="addNewBTN" value="Upload">Submit</button>
+                </form>
+            </section>
+            <section class="goBack">
+                <a href="/profile">Back to your profile</a>
+            </section>
         </section>
 
 
-        <section>
-            <a href="/company/<%= company.id %>">Back to <%= company.name %></a>
         </section>
 
-    </section>
 
-    <%- include('partials/footer') -%>
+
+        <%- include('partials/footer') -%>
+
+
+
+
+
+            <%- include('partials/footer') -%>

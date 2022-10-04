@@ -2,52 +2,72 @@
 
 
     <section class="addNew">
-        <h2>Create a New Contact for <%= company.name %>
-        </h2>
+        <section class="addNewForm">
+            <h2 class="addNewTitle">Create a New Contact for <%= company.companyName %>
+            </h2>
+
+            <section class="addNewForm">
+                <section class="formSection">
+                    <form action="/company/createNewContact/<%= company.id %>" method="POST" name="createCompanyForm">
+
+                        <!-- First Name -->
+                        <section class="inputSection">
+                            <label for="firstName" class="addNewLabel">First Name:</label>
+                            <input type="text" class="form-control addNewInput" id="firstName" name="firstName"
+                                placeholder="First Name">
+                        </section>
+                        <!-- Last Name -->
+                        <section class="inputSection">
+                            <label for="lastName" class="addNewLabel">Last Name:</label>
+                            <input type="text" class="form-control addNewInput" id="lastName" name="lastName"
+                                placeholder="Last Name">
+                        </section>
+                        <!-- Title -->
+                        <section class="inputSection">
+                            <label for="contactTitle" class="addNewLabel">Contact Title:</label>
+                            <input type="text" class="form-control addNewInput" id="contactTitle" name="contactTitle"
+                                placeholder="Contact Title">
+                        </section>
+                        <!-- Website -->
+                        <!-- <section class="inputSection">
+                            <label for="contactWebsite" class="addNewLabel">Contact Website:</label>
+                            <input type="text" class="form-control addNewInput" id="contactWebsite"
+                                name="contactWebsite" placeholder="Contact Website">
+                        </section> -->
+                        <!-- LInkedIn -->
+                        <section class="inputSection">
+                            <label for="contactLinkedIn" class="addNewLabel">Contact LinkedIn:</label>
+                            <input type="text" class="form-control addNewInput" id="contactLinkedIn"
+                                name="contactLinkedIn" placeholder="Contact LinkedIn">
+                        </section>
+                        <!-- Twitter -->
+                        <section class="inputSection">
+                            <label for="contactTwitter" class="addNewLabel">Contact Twitter:</label>
+                            <input type="text" class="form-control addNewInput" id="contactTwitter"
+                                name="contactTwitter" placeholder="Contact Twitter">
+                        </section>
 
 
-        <section>
-            <form action="/company/createNewContact/<%= company.id %>" method="POST">
-
-                <label for="firstName">First Name:</label>
-                <input type="text" class="form-control" id="firstName" name="firstName"
-                    placeholder="Contacts First Name">
-
-                <label for="lastName">Last Name:</label>
-                <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Contacts Last Name">
-
-                <label for="contactTitle">Contact Title:</label>
-                <input type="text" class="form-control" id="contactTitle" name="contactTitle"
-                    placeholder="Contact Title">
-
-                <label for="contactWebsite">Contact Blog:</label>
-                <input type="text" class="form-control" id="contactWebsite" name="contactWebsite"
-                    placeholder="Contacts Person Site/Blog">
-
-                <!-- LinkedIn -->
-                <label for="contactLinkedIn">Contact LinkedIn:</label>
-                <input type="text" class="form-control" id="contactLinkedIn" name="contactLinkedIn"
-                    placeholder="Contact LinkedIn:">
-
-                <!-- Twitter -->
-                <label for="contactTwitter">Contact Twitter:</label>
-                <input type="text" class="form-control" id="contactTwitter" name="contactTwitter"
-                    placeholder="Contact Twitter">
 
 
-                <!-- <label for="sourceURL">Job URL</label>
-            <input type="text" class="form-control" id="positionTitle" name="sourceURL" placeholder="Job Source URL"> -->
+                </section>
 
-                <button type="submit" class="" value="Upload">Submit</button>
-            </form>
+                <button type="submit" class="addNewBTN" value="Upload">Submit</button>
+                </form>
+            </section>
+
+
         </section>
 
 
-        <section>
-            <a href="/company/<%= company.id %>">Back to <%= company.name %></a>
+        <section class="goBack">
+            <a href="/profile">Back to your profile</a>
         </section>
+
 
 
     </section>
-    
+
+    </section>
+
     <%- include('partials/footer') -%>

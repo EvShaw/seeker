@@ -133,10 +133,54 @@
 
 .addNew {
   height: 100%;
-  padding-top: 50vh;
-  align-items: center;
-  text-align: center;
+  padding-top: 30vh;
   background: linear-gradient(to right, rgba(39, 39, 39, 0.8), rgba(39, 39, 39, 0.2));
+}
+.addNew .addNewForm {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.addNew .addNewForm .addNewTitle {
+  width: 100%;
+  text-align: center;
+  color: #ffa500;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+.addNew .addNewForm .formSection {
+  width: 50%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+.addNew .addNewForm .inputSection {
+  width: 80%;
+}
+.addNew .addNewForm .addNewBTN {
+  padding: 4px;
+  background: #676767;
+  border: 1px solid #ffa500;
+  color: #ffa500;
+  margin-top: 2rem;
+  text-align: center;
+}
+.addNew .addNewForm .addNewBTN:hover {
+  background: #ffa500;
+  color: #272727;
+  transition: all 0.25s ease-in-out;
+}
+.addNew .goBack {
+  text-align: center;
+}
+.addNew .goBack a:hover {
+  color: #ffa500;
+  transition: all 0.25s ease-in-out;
 }
 
 .company {
@@ -247,7 +291,7 @@
 .company .deleteBTN {
   border: 1px solid red;
   color: red;
-  background: #676767;
+  background: #343434;
   padding: 4px;
   margin: 1rem 0;
 }
