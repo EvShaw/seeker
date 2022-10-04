@@ -1,32 +1,34 @@
 <%- include('partials/header') -%>
 
-
+<section class="addNew">
+  
 
 <h2>Create a New Company:</h2>
-  <section>
-    <form action="/company/createNewCompany" method="POST" name="createCompanyForm">
+<section>
+  <form action="/company/createNewCompany" method="POST" name="createCompanyForm">
 
-      <!-- Company Name -->
-      <label for="companyName">Company Name:</label>
-      <input type="text" class="form-control" id="companyName" name="companyName" placeholder="Company Name">
+    <!-- Company Name -->
+    <label for="companyName">Company Name:</label>
+    <input type="text" class="form-control" id="companyName" name="companyName" placeholder="Company Name">
 
-      <!-- Company Website -->
-      <label for="companyWebsite">Company Website:</label>
-      <input type="text" class="form-control" id="companyName" name="companyWebsite" placeholder="Company Website">
+    <!-- Company Website -->
+    <label for="companyWebsite">Company Website:</label>
+    <input type="text" class="form-control" id="companyName" name="companyWebsite" placeholder="Company Website">
 
-      <!-- Company Industry -->
-      <label for="companyIndustry">Company Industry:</label>
-      <input type="text" class="form-control" id="ompanyIndustry" name="companyIndustry" placeholder="Company Industry">
-
-
-      <button type="submit" class="" value="Upload">Submit</button>
-    </form>
-  </section>
+    <!-- Company Industry -->
+    <label for="companyIndustry">Company Industry:</label>
+    <input type="text" class="form-control" id="ompanyIndustry" name="companyIndustry" placeholder="Company Industry">
 
 
- 
-  <section>
-    <a href="/profile">Back to your profile</a>
+    <button type="submit" class="" value="Upload">Submit</button>
+  </form>
+</section>
+
+
+
+<section>
+  <a href="/profile">Back to your profile</a>
+</section>
 </section>
 
   <%- include('partials/footer') -%>

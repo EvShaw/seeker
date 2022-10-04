@@ -3,7 +3,10 @@
 @import 'home';
 @import 'login';
 @import 'signup';
-@import 'profile'; //here
+@import 'profile'; 
+@import 'addNew'; 
+
+@import 'contacts';
 @import 'menu';
 @import 'loginSignup';
 
@@ -15,6 +18,10 @@ body {
     line-height: 1;
 }
 
+.bold {
+    font-weight: 700;
+}
+
 h1,
 h2,
 h3 {
@@ -24,6 +31,15 @@ a {
     color: set-text-color($primary-color);
     text-decoration: none;
 }
+
+.pText {
+    margin-bottom: 2rem;
+
+    :hover {
+        color: $secondary-color;
+    }
+}
+.pText
 
 .text-secondary {
     color: $secondary-color;
