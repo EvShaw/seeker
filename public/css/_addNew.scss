@@ -1,12 +1,73 @@
 .addNew {
     height: 100%;
-    padding-top: 50vh;
-    align-items: center;
-    text-align: center;
+    padding-top: 30vh;
+    
+
     background:
         linear-gradient(to right,
             rgba($primary-color, 0.8),
             rgba($primary-color, 0.2)),
+    ;
 
-  
+    .addNewForm {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+
+        .addNewTitle {
+            width: 100%;
+            text-align: center;
+            color: $secondary-color;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+        }
+
+        .formSection {
+            width: 50%;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+        }
+
+        .inputSection {
+            width: 80%;
+        }
+
+        .addNewBTN {
+            padding: 4px;
+            background: lighten($primary-color, 25%);
+            border: 1px solid $secondary-color;
+            color: $secondary-color;
+
+            &:hover {
+                background: $secondary-color;
+                color: $primary-color;
+                @include trasition-ease;
+
+            }
+
+            margin-top: 2rem;
+            text-align: center;
+        }
+    }
+
+    .goBack {
+        text-align: center;
+
+        & a {
+            &:hover {
+                color: $secondary-color;
+                @include trasition-ease;
+    
+            }
+        }
+       
+       
+    }
+
 }
