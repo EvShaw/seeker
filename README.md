@@ -31,10 +31,10 @@
 <br />
 <div align="center">
   <a href="https://https://github.com/EvShaw/theHitList">
-    <img src="https://img.icons8.com/external-outline-stroke-bomsymbols-/344/external-crosshair-location-outline-outline-stroke-bomsymbols--2.png" alt="Logo" width="80" height="80">
+    <img src="/assets/seekerLogo.png" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">The Hit List</h3>
+<h3 align="center">Seeker</h3>
 
 </div>
 
@@ -48,7 +48,8 @@
       <ul>
         <li><a href="#built-with">Built With:</a></li>
             <ul>
-                <li>MERN Stack</li>
+                <li>Built with the MERN Stack</li>
+                <li>Styled with Sass</li>
             </ul>
       </ul>
     </li>
@@ -72,9 +73,9 @@
 
    This full stack application is being built, live and publicly. It is not finished and will be hosted once completed.
     
-  The Hit List is a tool designed to help job seekers manage their network as they seek out and navigate through the process of obtaining the job of their choosing. 
+  Seeker is a tool designed to help job seekers manage their network as they seek out and navigate through the process of obtaining the job of their choosing. 
   <br />
-  Store, grow, and manage the list of companies you want while tracking contacts, communication, and follow ups to help you network your way passed modern day gatekeepers.  
+  Store, grow, and manage the list of companies you want while tracking contacts, communication, and follow ups to help you network your way through an evolved process with precision. 
   <br />
   <a href="https://github.com/EvShaw/theHitList"><strong>Explore the docs »</strong></a>
   <br />
