@@ -1,0 +1,37 @@
+.home {
+    height: 100%;
+    padding-top: 70vh;
+    align-items: center;
+    text-align: center;
+    background:
+        linear-gradient(to right,
+            rgba($primary-color, 0.9),
+            rgba($primary-color, 0.3)),
+        
+        url('../assets/honey-yanibel-minaya-cruz-6gSyEKq4Pvg-unsplash.png') center center no-repeat;
+    background-size: contain;
+    
+
+    &__main {
+       
+    }
+
+    &__login {
+        font-size: 3.6rem;
+        margin-top: 1rem;
+        margin-right: 1rem;
+
+    }
+    &__signup {
+        font-size: 3.6rem;
+        margin-top: 1rem;      
+        color: $secondary-color;
+        font-weight: 700;
+       
+    }
+    &__underScore {
+        border-bottom: 2px solid #fff;
+        padding-bottom: 1rem;
+    }
+
+}

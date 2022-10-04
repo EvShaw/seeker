@@ -5,15 +5,34 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hit List</title>
+    <title>Seeker</title>
     <link rel="icon" type="image/png" sizes="32x32"
-        href="https://img.icons8.com/ios-filled/344/define-location--v1.png" />
+        href="/assets/seekerLogo.png" />
     <script src="https://kit.fontawesome.com/7cf0d55140.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="/css/main.css" />
 
 </head>
 
-<body>
+<body class="light">
+    <header>
+        <div class="menu-btn">
+            <span class="menu-btn__burger"></span>
+        </div>
+
+        <nav class="nav">
+            <ul class="menu-nav">
+                <li class="menu-nav__item active">
+                    <a href="/index" class="menu-nav__link">Profile</a>
+                </li>
+                <li class="menu-nav__item">
+                    <a href="/index" class="menu-nav__link">Contact List</a>
+                </li>
+                <li class="menu-nav__item">
+                    <a href="/index" class="menu-nav__link">Open Position List</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
     <nav>
         <h1 class="medText"><a href="/profile">The Hit List</a></h1>
     </nav>
