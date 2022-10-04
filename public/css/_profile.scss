@@ -52,10 +52,12 @@
 
     .jobs {
         width: 40vw;
+        height: 50vh;
+        overflow-y: scroll;
         margin: 0 auto;
         display: grid;
         grid-template-columns: 1fr;
-        grid-gap: 2rem;
+        grid-gap: .5rem;
 
         &__header {
             background: lighten($primary-color, 10%);
@@ -66,7 +68,7 @@
             & a:hover {
                 color: $secondary-color;
                 @include trasition-ease;
-              
+
                 margin: 0 auto;
                 // color: darken(set-text-color($primary-color), 25%);
             }
@@ -95,13 +97,13 @@
     }
 
 
-.social-icons {
-    display: flex;
-    flex-direction: column;
-}
+    .social-icons {
+        display: flex;
+        flex-direction: column;
+    }
 
-footer {
-    transform:
-        rotate(90deg) translate(-3rem, -5rem);
-}
+    footer {
+        transform:
+            rotate(90deg) translate(-3rem, -5rem);
+    }
 }

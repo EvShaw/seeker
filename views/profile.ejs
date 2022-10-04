@@ -61,28 +61,28 @@
       <section class="jobs__header">
         <h2 class="text-secondary pText">Add a New Company:</h2>
         <a href="/addNewCompany">
-          <i class="fa-solid fa-crosshairs">
-          </i>
+          <i class="fa-solid fa-crosshairs"></i>
           <span>New company</span>
-          <p class="pText"></p>
+        </a>
+        <p class="pText"></p>
       </section>
 
       <section class="profile__jobs">
+
         <section class="jobs">
-
           <% for(var i=0; i<companies.length; i++) {%>
-            <section class="jobs__job">
-              <h2 class="text-secondary">
-                <%= companies[i].companyName %>
-              </h2>
-              <!-- add the below later. Need to pull numbers from DB based on company id -->
-              <!-- <h4>Contacts: <%= companies[i].companyName %></h4>
-              <h4>Positions:</h4> -->
-            </section>
-            <% } %>
+            <a href="/company/<%= companies[i]._id %>">
+              <section class="jobs__job">
+                <h2 class="text-secondary">
+                  <%= companies[i].companyName %>
+                </h2>
+            </a>
+            <!-- ADD contacts and roles qty ticker for each company -->
+        </section>
+        <% } %>
 
 
-              <!-- <section class="jobs__job">
+          <!-- <section class="jobs__job">
             <h2 class="text-secondary">Right Now</h2>
             <h3>Company Name</h3>
             <h6>Position Title</h6>
@@ -97,14 +97,14 @@
               aliquid? Excepturi facilis eum quibusdam possimus.</p>
           </section> -->
 
-        </section>
       </section>
-
     </section>
+
+  </section>
   </section>
 
   <!-- bottom/ create New Company  -->
-  <section class="">
+  <!-- <section class="">
     <section class="">
       <a href="/addNewCompany">
         <i class="fa-solid fa-crosshairs">
@@ -112,7 +112,7 @@
         <span>New company</span>
       </a>
     </section>
-  </section>
+  </section> -->
 
 
 

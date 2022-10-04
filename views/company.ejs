@@ -1,78 +1,104 @@
 <%- include('partials/header') -%>
 
-  <section class="companyProfile">
-    <section class="companyInfo">
-      <h1>
-        <%= company.name %>
+  <section class="company">
+    <section class="company__display">
+      <h1 class="company__name">
+        <%= company.companyName %>
       </h1>
-      <span class="dateAdded">Date Added: <%= company.createdAt %></span>
-      <br>
-      <span class="companyURL">company URL: <a href="<%= company.website %>">
-          <%= company.website %>
+      <!-- <span class="dateAdded">Date Added: <%= company.createdAt %></span> -->
+
+      <span class="secondary-color">company URL: <a href="<%= company.website %>">
+          <%= company.companyWebsite %>
         </a></span>
 
-      <br>
-      <br>
+
     </section>
-    
+
+    <section class="company__assets">
+      <!-- Positions at Company -->
+      <section class="company__positions">
+
+        <h2 class="positionsHeader">Open Role/Positions:</h2>
+
+        <!-- create a new role/position -->
+        <section class="slot">
+
+          <a href="/company/addNewPosition/<%= company.id %>"><i class="fa-solid fa-circle-plus"></i> Add a new
+            position</a>
+
+          <% for(var i=0; i<positions.length; i++) {%>
+
+            <section class="roles">
+              <section class="title">
+                <%= positions[i].positionTitle %>
+              </section>
+              <section class="url">
+                <a href="<%= positions[i].sourceURL %>">
+                  <%= positions[i].sourceURL %>
+                </a>
+              </section>
+              <section class="">
+                <form action="/company/deletePosition/<%= positions[i].id%>?_method=DELETE" method="POST">
+                  <button class="deleteBTN" type="submit">Delete</button>
+                </form>
+              </section>
+            </section>
+            <% } %>
+        </section>
+      </section>
+
+
+      <!-- do not change above this line -->
+
+      <!-- Contacts at Company -->
+      <section class="company__positions">
+        <h2 class="positionsHeader">Contacts:</h2>
+        <!-- create a new role/position -->
+        <section class="slot">
+
+          <a href="/company/addNewContact/<%= company._id %>"><i class="fa-solid fa-circle-plus"></i> Add a new
+            contact</a>
+
+          <% for(var i=0; i<contacts.length; i++) {%>
+
+            <section class="roles">
+              <section class="title">
+                <%= contacts[i].firstName %>
+                  <%= contacts[i].lastName %>
+              </section>
+              <section class="url">
+                <a href="<%= contacts[i].contactWebsite %>">
+                  <%= positions[i].sourceURL %>
+                </a>
+              </section>
+              <section class="">
+                <form action="/company/deletePosition/<%= positions[i].id%>?_method=DELETE" method="POST">
+                  <button class="deleteBTN" type="submit">Delete</button>
+                </form>
+              </section>
+            </section>
+            <% } %>
+        </section>
+      </section>
+    </section>
+
+
+
+
+
+
+    <!-- REMINDER: remove the hr when styling -->
+    <!-- <hr> -->
+
+    <form action="/company/deleteCompany/<%= company._id %>?_method=DELETE" method="POST">
+      <button class="deleteBTN" type="submit">Delete <%= company.companyName %></button>
+    </form>
+
+    <section class="goBack">
+      <a href="/profile">Back to your profile</a>
+    </section>
+
   </section>
-
-  <!-- Positions at Company -->
-  <h2>Open Role/Positions:</h2>
-  <section class="openPositions">
-
-    <!-- create a new role/position -->
-    <a href="/company/addNewPosition/<%= company.id %>"><i class="fa-solid fa-circle-plus"></i> Add a new position</a>
-
-    <ul>
-      <% for(var i=0; i<positions.length; i++) {%>
-        <li><%= positions[i].positionTitle %></li>
-
-        <form action="/company/deletePosition/<%= positions[i].id%>?_method=DELETE" method="POST">
-          <button class="btn btn-outline-danger" type="submit">Delete</button>
-        </form>
-        
-        <% } %>
-
-    </ul>
-  </section>
-
-
-  <!-- Contacts at Company -->
-  <section class="companyContacts">
-    <h2>Contacts at this company:</h2>
-
-    <a href="/company/addNewContact/<%= company._id %>"><i class="fa-solid fa-circle-plus"></i> Add a new contact</a>
-
-
-    <ul>
-      <% for(var i=0; i<contacts.length; i++) {%>
-        <li><%= contacts[i].firstName %> <%= contacts[i].lastName %> <%= contacts[i].contactTitle %></li>
-       
-
-        <form action="/company/deletecontact/<%= contacts[i].id%>?_method=DELETE" method="POST">
-          <button class="btn btn-outline-danger" type="submit">Delete</button>
-        </form>
-        
-        <% } %>
-
-    </ul>
-
-
-  </section>
-
-
-  <!-- REMINDER: remove the hr when styling -->
-  <hr>
-
-  <form action="/company/deleteCompany/<%= company._id %>?_method=DELETE" method="POST">
-    <button class="" type="submit">Delete</button>
-  </form>
-
-  <section>
-    <a href="/profile">Back to your profile</a>
-  </section>
-
 
 
 

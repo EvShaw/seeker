@@ -66,4 +66,3 @@ app.use("/company", companyRoutes);
 app.listen(process.env.PORT, () => {
     console.log('Servers Online')
 })
-
