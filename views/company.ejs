@@ -68,11 +68,11 @@
               </section>
               <section class="url">
                 <a href="<%= contacts[i].contactWebsite %>">
-                  <%= positions[i].sourceURL %>
+                  <%= contacts[i].contactWebsite %>
                 </a>
               </section>
               <section class="">
-                <form action="/company/deletePosition/<%= positions[i].id%>?_method=DELETE" method="POST">
+                <form action="/company/deleteContact/<%= contacts[i].id%>?_method=DELETE" method="POST">
                   <button class="deleteBTN" type="submit">Delete</button>
                 </form>
               </section>
