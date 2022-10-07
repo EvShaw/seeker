@@ -9,8 +9,13 @@ module.exports = {
       const companies = await Company.find({ user: req.user.id }).sort({ createdAt: "asc" });
       const contacts = await Contact.find({ user: req.user.id })
       const positions = await Position.find({ user: req.user.id })
+      
+      console.log(positions)
 
       res.render("profile.ejs", { companies: companies, user: req.user, contacts: contacts, positions: positions });
+
+
+     
 
     } catch (err) {
       console.log(err);
@@ -21,6 +26,8 @@ module.exports = {
       const company = await Company.findById(req.params.id);
       const positions = await Position.find({ company: req.params.id })
       const contacts = await Contact.find({ company: req.params.id })
+
+      console.log(positions)
 
       res.render("company.ejs", { company: company, user: req.user, contacts: contacts, positions: positions });
     } catch (err) {

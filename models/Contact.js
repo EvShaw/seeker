@@ -13,9 +13,9 @@ const ContactSchema = new mongoose.Schema({
     type: String, 
     required: true,
   },
-  // contactWebsite: {
-  //   type: String, 
-  // },
+  contactWebsite: {
+    type: String, 
+  },
   contactLinkedIn: {
     type: String, 
   },
