@@ -8,7 +8,9 @@
             rgba($primary-color, 0.8),
             rgba($primary-color, 0.2)),
 
-        url('../assets/compassGraphic-removebg-preview.png') 50% 50% no-repeat;
+        url('') 50% 50% no-repeat, 
+        url(" https://images.unsplash.com/photo-1445711005973-54fe2a103826?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80") no-repeat 50% 50%;
+
     background-size: 100%, 300px;
 
     &__login {
@@ -23,6 +25,7 @@
             color: darken(set-text-color($primary-color), 25%);
         }
     }
+
     &__signup {
         font-size: 3.6rem;
         margin-top: 1rem;
@@ -34,7 +37,6 @@
 
         &:hover {
             color: darken($secondary-color, 10%)
-
         }
     }
 
@@ -42,5 +44,15 @@
         border-bottom: 2px solid set-text-color($primary-color);
         padding-bottom: 1rem;
     }
-}
 
+    .seekerMainHeader {
+        font-size: 4.8rem;
+        font-weight: 100;
+        color: $secondary-color;
+
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
